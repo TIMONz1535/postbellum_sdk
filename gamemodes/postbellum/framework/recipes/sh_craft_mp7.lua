@@ -3,6 +3,7 @@ local RECIPE = Clockwork.recipe:New()
 	RECIPE.category = "Оружие"
 	RECIPE.description = "Компактное оружие черной окраски. Имеет подствольный гранатомет."
 	RECIPE.model = "models/weapons/w_smg1.mdl"
+	RECIPE.requiredEnt = "workbench"
 	RECIPE.required = {
 		{"craft_smg1"},
 		{"craft_nails", 3, 2},

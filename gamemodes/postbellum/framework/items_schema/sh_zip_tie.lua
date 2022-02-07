@@ -12,7 +12,7 @@ ITEM.spawnValue = 1;
 ITEM.model = "models/items/crossbowrounds.mdl";
 ITEM.weight = 0.2;
 ITEM.useText = "Связать";
-ITEM.description = "Небольшая веревка из прочного материала. Ей можно связать кого-нибудь.";
+ITEM.description = "Прочная пластиковая стяжка. Ей можно связать кого-нибудь.";
 
 -- Called when a player uses the item.
 function ITEM:OnUse(player, itemEntity)

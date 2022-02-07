@@ -9,11 +9,11 @@ ITEM.plural = "Бинтов";
 ITEM.spawnType = "medical";
 ITEM.spawnValue = 1;
 --ITEM.cost = 8;
-ITEM.model = "models/props_wasteland/prison_toiletchunk01f.mdl";
+ITEM.model = "models/pb_upd/medical/bandage.mdl";
 ITEM.weight = 0.5;
 ITEM.useText = "Использовать";
-ITEM.category = "Медикаменты"
-ITEM.description = "Стерильный бинт, используется для перевязки ран.";
+ITEM.category = "Медикаменты";
+ITEM.description = "Нестерильный бинт, используется для перевязки ран.";
 ITEM.customFunctions = {"Вылечить"};
 
 -- Called when a player uses the item.

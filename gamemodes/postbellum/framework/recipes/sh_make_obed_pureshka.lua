@@ -11,4 +11,3 @@ local RECIPE = Clockwork.recipe:New();
 		{"obed_pureshka", 1}
 	}
 RECIPE:Register()
-sh_obed_pureshka.lua

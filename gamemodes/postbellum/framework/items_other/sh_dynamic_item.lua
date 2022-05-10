@@ -32,8 +32,8 @@ ITEM.widgetsList = {
 	{networked = true, id = "useText", name = "Текст использования", type = "text", placeholder = "Использовать"},
 	{stat = true, id = "hp", name = "Здоровье"},
 	{stat = true, id = "ap", name = "Броня"},
-	{stat = true, id = "thirst", name = "Еда"},
-	{stat = true, id = "hunger", name = "Вода"},
+	{stat = true, id = "thirst", name = "Вода"},
+	{stat = true, id = "hunger", name = "Еда"},
 	{stat = true, id = "vomit", name = "Тошнота"},
 	--
 	{

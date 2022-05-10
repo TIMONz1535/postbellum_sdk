@@ -18,9 +18,6 @@ ITEM.attributes = {
 
 -- Called when a player uses the item.
 function ITEM:OnUse(player, itemEntity)
-	for k, v in pairs(self.attributes) do
-		player:BoostAttribute(self.name, k, v, self.expireTime)
-	end
 	Clockwork.player:SetDrunk(player, self.expireTime)
 
 	timer.Simple(

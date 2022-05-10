@@ -28,11 +28,16 @@ function ITEM:OnUse(player, itemEntity)
 			if (target:GetNetVar("tied") == 0) then
 				if (target:GetShootPos():Distance( player:GetShootPos() ) <= 192) then
 					if (target:GetAimVector():DotProduct( player:GetAimVector() ) > 0 or target:IsRagdolled()) then
-						local whitelisted = player:GetData("Whitelisted");
-						if not whitelisted or #whitelisted == 0 then
-							Clockwork.kernel:PrintLog(LOGTYPE_MAJOR, player:Name() .. " пытается связать персонажа " .. target:Name() .. ", но не имеет Вайтлистов.")
+						if Schema:IsUntrusted(player) then
+							-- TODO: Can be removed in the future
+							if not player.nextAlert or player.nextAlert < CurTime() then
+								player.nextAlert = CurTime() + 1
+
+								Schema:PlayerAlert(player, "пытается связать " .. target:Name() .. ", но не имеет Вайтлистов!")
+							end
+
 							Clockwork.player:Notify(player, "Данное действие вам еще недоступно!");
-							return false;
+							return false
 						end
 
 						Clockwork.player:SetAction(player, "tie", tieTime);

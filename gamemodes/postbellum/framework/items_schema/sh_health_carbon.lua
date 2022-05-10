@@ -11,7 +11,6 @@ ITEM.spawnValue = 2;
 --ITEM.cost = 15;
 ITEM.model = "models/props_junk/garbage_metalcan001a.mdl";
 ITEM.weight = 0.1;
-ITEM.useText = "Употребить";
 ITEM.category = "Медикаменты";
 ITEM.description = "Металлическая баночка с таблетками активированного угля. Помогает при отравлении.";
 ITEM.vomit = -40;

@@ -11,7 +11,6 @@ ITEM.spawnValue = 2;
 --ITEM.cost = 12;
 ITEM.model = "models/props_lab/jar01a.mdl";
 ITEM.weight = 0.2;
-ITEM.useText = "Употребить";
 ITEM.category = "Медикаменты";
 ITEM.description = "Баночка с белым порошком. Необходимо употреблять в правильных дозах.";
 

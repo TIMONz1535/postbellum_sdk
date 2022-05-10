@@ -9,18 +9,16 @@ ITEM.plural = "Аптечек";
 --ITEM.cost = 30;
 ITEM.model = "models/items/healthkit.mdl";
 ITEM.weight = 1;
-ITEM.useText = "Использовать";
 ITEM.category = "Медикаменты"
 ITEM.useSound = "items/medshot4.wav";
-ITEM.blacklist = {CLASS_MPR};
 ITEM.description = "Контейнер содержащий различные перевязочные материалы, и лекарственные препараты.";
-ITEM.customFunctions = {"Вылечить"};
+ITEM.customFunctions = {"Вылечить другого"};
 ITEM.vomit = -40;
 
 -- Called when a player uses the item.
 function ITEM:OnUse(player, itemEntity)
 	player:SetHealth( math.Clamp( player:Health() + Schema:GetHealAmount(player, 2), 0, player:GetMaxHealth() ) );
-	
+
 	Clockwork.plugin:Call("PlayerHealed", player, player, self);
 end;
 
@@ -29,7 +27,7 @@ function ITEM:OnDrop(player, position) end;
 
 if (SERVER) then
 	function ITEM:OnCustomFunction(player, name)
-		if (name == "Вылечить") then
+		if (name == "Вылечить другого") then
 			Clockwork.player:RunClockworkCommand(player, "CharHeal", "health_kit");
 		end;
 	end;

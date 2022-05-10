@@ -16,7 +16,7 @@ ITEM.addInvSpace = 13
 -- Called when a player attempts to buy the item from salesman.
 function ITEM:CanBuy(player)
 	if (player:HasItemByID("cps_gear") or player:HasItemByID("cps_bag") or player:HasItemByID("backpack") or player:HasItemByID("small_bag")) then
-		Clockwork.player:Notify(player, "Вы не можете взять больше "..ITEM.plural.."!")
+		Clockwork.player:Notify(player, "Вы не можете взять больше "..self.plural.."!")
 
 		return false
 	end
@@ -25,7 +25,7 @@ end
 -- Called when a player attempts to take the item from storage.
 function ITEM:CanTakeStorage(player, storageTable)
 	if (player:HasItemByID("cps_gear") or player:HasItemByID("cps_bag") or player:HasItemByID("backpack") or player:HasItemByID("small_bag")) then
-		Clockwork.player:Notify(player, "Вы не можете взять больше "..ITEM.plural.."!")
+		Clockwork.player:Notify(player, "Вы не можете взять больше "..self.plural.."!")
 
 		return false
 	end
@@ -34,7 +34,7 @@ end;
 -- Called when a player attempts to pick up the item.
 function ITEM:CanPickup(player, quickUse, itemEntity)
 	if (player:HasItemByID("cps_gear") or player:HasItemByID("cps_bag") or player:HasItemByID("backpack") or player:HasItemByID("small_bag")) then
-		Clockwork.player:Notify(player, "Вы не можете взять больше "..ITEM.plural.."!")
+		Clockwork.player:Notify(player, "Вы не можете взять больше "..self.plural.."!")
 
 		return false
 	end

@@ -4,10 +4,7 @@ ITEM.plural = "Синих штанов повстанцев"
 ITEM.model = "models/tnb/items/pants_rebel.mdl"
 ITEM.skin = 1
 ITEM.weight = 2
-ITEM.useText = "Надеть"
-ITEM.category = "Одежда"
 ITEM.description = "Штаны для сил сопротивления."
-ITEM.customFunctions = {"Снять"}
 ITEM.wearBodyId = 2
 ITEM.wearBodyState = 5
 

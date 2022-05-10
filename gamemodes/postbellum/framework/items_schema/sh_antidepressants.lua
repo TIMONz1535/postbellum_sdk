@@ -11,7 +11,6 @@ ITEM.spawnValue = 3;
 --ITEM.cost = 10;
 ITEM.model = "models/props_junk/garbage_metalcan001a.mdl";
 ITEM.weight = 0.2;
-ITEM.useText = "Употребить";
 ITEM.category = "Медикаменты";
 ITEM.description = "Металлическая баночка с таблетками, которые помогут вам расслабиться.";
 ITEM.vomit = 30;

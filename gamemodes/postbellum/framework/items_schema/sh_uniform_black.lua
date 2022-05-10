@@ -23,7 +23,7 @@ ITEM.whitelist = {
 };
 
 -- Called when a replacement is needed for a player.
-function ITEM:GetReplacement(player)
+function ITEM:GetReplacement()
 	return "models/tactical_rebel.mdl";
 end;
 

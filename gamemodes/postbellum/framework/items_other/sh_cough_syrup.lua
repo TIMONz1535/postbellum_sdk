@@ -8,7 +8,7 @@ ITEM.weight = 0.2
 ITEM.useText = "Выпить"
 ITEM.category = "Медикаменты"
 ITEM.description = "Стеклянная бутыль наполненная липкой густой жидкостью."
-ITEM.customFunctions = {"Напоить"}
+ITEM.customFunctions = {"Вылечить другого"}
 
 -- Called when a player uses the item.
 function ITEM:OnUse(player, itemEntity)
@@ -19,7 +19,7 @@ end
 
 if (SERVER) then
 	function ITEM:OnCustomFunction(player, name)
-		if (name == "Напоить") then
+		if (name == "Вылечить другого") then
 			local lookingPly = player:GetEyeTrace().Entity
 			if not IsValid(lookingPly) or not lookingPly:IsPlayer() then
 				Clockwork.player:Notify(player, "Вы должны смотреть на игрока!")

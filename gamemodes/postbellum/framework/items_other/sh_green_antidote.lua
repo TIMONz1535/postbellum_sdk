@@ -5,9 +5,10 @@ ITEM.name = "Антидот"
 ITEM.plural = "Антидотов"
 ITEM.model = "models/healthvial.mdl"
 ITEM.weight = 0.2
+ITEM.useText = "Вколоть";
 ITEM.category = "Медикаменты"
 ITEM.description = 'Шприц с надписью "Антидот"'
-ITEM.customFunctions = {"Вколоть"}
+ITEM.customFunctions = {"Вылечить другого"}
 
 -- Called when a player uses the item.
 function ITEM:OnUse(player, itemEntity)
@@ -23,7 +24,7 @@ end
 
 if (SERVER) then
 	function ITEM:OnCustomFunction(player, name)
-		if (name == "Вколоть") then
+		if (name == "Вылечить другого") then
 			local lookingPly = player:GetEyeTrace().Entity
 			if not IsValid(lookingPly) or not lookingPly:IsPlayer() then
 				Clockwork.player:Notify(player, "Вы должны смотреть на игрока!")

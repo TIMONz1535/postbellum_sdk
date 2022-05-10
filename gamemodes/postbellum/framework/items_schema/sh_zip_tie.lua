@@ -53,10 +53,10 @@ function ITEM:OnUse(player, itemEntity)
 
 								if (Schema:PlayerIsCombine(target)) then
 									local location = Schema:PlayerGetLocation(target);
-									local Digits = string.match(target:Name(), "%d%d%d%d?%d?")
+									local Digits = string.match(target:Name(), "C17%..+:(%w+)")
 									if Digits then
 										Schema:AddCombineDisplayLine("Загрузка информации о радиосигнале...", Color(255, 255, 255, 255), nil, target);
-										Schema:AddCombineDisplayLine("ВНИМАНИЕ! Радиосигнал юнита "..Digits.." потерян в "..location.."...", Color(255, 50, 0, 255), nil, target);
+										Schema:AddCombineDisplayLine("ВНИМАНИЕ! Радиосигнал Юнита "..Digits.." потерян в "..location.."...", Color(255, 50, 0, 255), nil, target);
 									end
 								end;
 

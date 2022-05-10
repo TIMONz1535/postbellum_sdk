@@ -1,30 +1,53 @@
---[[
-	© 2013 CloudSixteen.com do not share, re-distribute or modify
-	without permission of its author (kurozael@gmail.com).
---]]
+-- luacheck: globals Clockwork math FACTION_REBELJUG FACTION_CREMATOR IsValid SERVER
 
-local ITEM = Clockwork.item:New();
-ITEM.name = "Ящик с инструментами";
-ITEM.plural = "Ящиков с инструментами";
---ITEM.cost = 5;
-ITEM.model = "models/props_lab/partsbin01.mdl";
-ITEM.weight = 10;
-ITEM.useText = "Использовать";
-ITEM.useSound = "vehicles/crane/crane_magnet_switchon.wav";
-ITEM.description = "Набор инструментов и деталей для ремонта.";
+local ITEM = Clockwork.item:New()
+ITEM.name = "Ремкомплект"
+ITEM.plural = "Ремкомплектов"
+ITEM.model = "models/props_lab/partsbin01.mdl"
+ITEM.weight = 10
+ITEM.useSound = "vehicles/crane/crane_magnet_switchon.wav"
+ITEM.description = "Набор инструментов и деталей для ремонта тяжелой брони."
+ITEM.customFunctions = {"Починить другого"}
 
--- Called when a player uses the item.
 function ITEM:OnUse(player, itemEntity)
-	if player:GetFaction() == FACTION_REBELJUG then
-		player:SetArmor( math.Clamp( player:Armor() + 50, 0, player:GetMaxArmor() ) )
-	else
-		Clockwork.player:Notify(player, "Вы не можете использовать это.")
-		
-		return false
+	local faction = player:GetFaction()
+	if faction == FACTION_REBELJUG or faction == FACTION_CREMATOR then
+		local maxArmor = player:GetMaxArmor()
+		player:SetArmor(math.Clamp(player:Armor() + maxArmor * 0.5, 0, maxArmor))
+		return -- don't use "true" it doesn't take item
 	end
-end;
 
--- Called when a player drops the item.
-function ITEM:OnDrop(player, position) end;
+	Clockwork.player:Notify(player, "Вы не можете использовать это.")
+	return false
+end
 
-ITEM:Register();
+function ITEM:OnDrop(player, position)
+end
+
+if SERVER then
+	function ITEM:OnCustomFunction(player, name)
+		if name == "Починить другого" then
+			local lookingPly = player:GetEyeTrace().Entity
+			if not IsValid(lookingPly) or not lookingPly:IsPlayer() then
+				Clockwork.player:Notify(player, "Вы должны смотреть на игрока!")
+				return
+			end
+
+			local faction = lookingPly:GetFaction()
+			if faction == FACTION_REBELJUG or faction == FACTION_CREMATOR then
+				local maxArmor = lookingPly:GetMaxArmor()
+				lookingPly:SetArmor(math.Clamp(lookingPly:Armor() + maxArmor * 0.5, 0, maxArmor))
+
+				lookingPly:EmitSound("vehicles/crane/crane_magnet_switchon.wav")
+				player:TakeItem(self)
+				player:FakePickup(lookingPly)
+				return true
+			end
+
+			Clockwork.player:Notify(player, "Вы не можете починить броню этого игрока.")
+			return false
+		end
+	end
+end
+
+ITEM:Register()

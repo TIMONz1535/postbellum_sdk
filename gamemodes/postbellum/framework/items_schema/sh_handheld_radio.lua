@@ -10,14 +10,14 @@ ITEM.plural = "Раций";
 ITEM.model = "models/cdev2_pb/handheld_radio.mdl";
 ITEM.weight = 0.4;
 ITEM.description = "Рация с функцией настройки радиочастоты.";
-ITEM.customFunctions = {"Частота"};
+ITEM.customFunctions = {"Установить частоту"};
 
 -- Called when a player drops the item.
 function ITEM:OnDrop(player, position) end;
 
 if (SERVER) then
 	function ITEM:OnCustomFunction(player, name)
-		if (name == "Частота") then
+		if (name == "Установить частоту") then
 			Clockwork.datastream:Start(player, "Frequency", player:GetCharacterData("frequency", ""));
 		end;
 	end;

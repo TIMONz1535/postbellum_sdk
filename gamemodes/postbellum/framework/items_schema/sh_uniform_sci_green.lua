@@ -1,9 +1,10 @@
 local ITEM = Clockwork.item:New("uniform_base")
-ITEM.name = "Костюм химзащиты"
-ITEM.model = "models/pb_upd/suit_cit/chim.mdl"
+ITEM.name = "Защитный комбинезон Ученого Green"
+-- ITEM.model = "models/pb_upd/suit_cit/chim.mdl"
+ITEM.group_adv = "borealisworkers"
 ITEM.weight = 6
-ITEM.protection = 0.3
-ITEM.description = "Защитный комбинезон для работы в опасных условиях."
+ITEM.protection = 0.4
+ITEM.description = "Защитный комбинезон повышенной прочности зеленого цвета для работы в опасных условиях."
 ITEM.whitelist = {
 	[FACTION_MPF] = true,
 	[FACTION_CITIZEN] = true,
@@ -22,12 +23,6 @@ ITEM.whitelist = {
 	[FACTION_INCOG] = true
 }
 
--- Called when a replacement is needed for a player.
-function ITEM:GetReplacement(isFemale)
-	if isFemale then
-		return "models/citizen_17_female.mdl"
-	end
-	return "models/citizen_17.mdl"
-end
+ITEM.bodyGroups = {[1] = 1}
 
 ITEM:Register()

@@ -3,7 +3,7 @@
 local ITEM = Clockwork.item:New();
 ITEM.name = "Яблоко";
 ITEM.plural = "Яблок";
-ITEM.model = "models/bioshockinfinite/hext_apple.mdl";
+ITEM.model = "models/uu_branded/bioshockinfinite/hext_apple.mdl";
 ITEM.spawnType = "consumable";
 ITEM.spawnValue = 3;
 ITEM.thirst = 4;

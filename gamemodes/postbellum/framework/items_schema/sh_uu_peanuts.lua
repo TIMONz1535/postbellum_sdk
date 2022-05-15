@@ -3,7 +3,7 @@
 local ITEM = Clockwork.item:New();
 ITEM.name = "Мешочек с арахисом";
 ITEM.plural = "Мешочков с арахисом";
-ITEM.model = "models/bioshockinfinite/rag_of_peanuts.mdl";
+ITEM.model = "models/uu_branded/bioshockinfinite/rag_of_peanuts.mdl";
 ITEM.spawnType = "consumable";
 ITEM.spawnValue = 3;
 ITEM.hunger = 15;

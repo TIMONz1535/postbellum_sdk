@@ -3,7 +3,7 @@
 local ITEM = Clockwork.item:New("ration_base")
 ITEM.name = "Рацион лоялистов"
 ITEM.plural = "Рационов лоялистов"
-ITEM.model = "models/weapons/w_packatm.mdl"
+ITEM.model = "models/uu_branded/weapons/w_packatm.mdl"
 ITEM.weight = 2
 ITEM.description = "Индивидуальный рацион питания из полноценных блюд. Дополнительно содержит жетоны и фрукт."
 ITEM.cash = 60

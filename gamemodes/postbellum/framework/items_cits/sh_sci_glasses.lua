@@ -1,21 +1,15 @@
--- luacheck: globals Clockwork SERVER GENDER_FEMALE
-
 local ITEM = Clockwork.item:New("cits_base")
-ITEM.name = "Берет Городского Ополчения"
-ITEM.plural = "Беретов Городского Ополчения"
-ITEM.model = "models/pb_upd/cpp_items/beret.mdl"
-ITEM.weight = 0.5
-ITEM.description = "Берет сотрудников Городского Ополчения."
+ITEM.name = "Очки Ученого"
+ITEM.model = "models/borealisworkers/items/glasses.mdl"
+ITEM.weight = 0.1
+ITEM.description = "Довольно простенькие очки, но почему-то носят исключительно Ученые."
 ITEM.wearBodyId = 2
--- male only
-ITEM.wearBodyState = 0
-ITEM.resetBodyState = 2
-ITEM.resetBodyStateF = 1
+ITEM.wearBodyState = 1
 
 if SERVER then
 	local function ResetBodyGroup(self, player)
 		local uniformItem = player:GetUniformItem()
-		if not uniformItem or uniformItem.uniqueID ~= "uniform_goo" then
+		if not uniformItem or (uniformItem.uniqueID ~= "uniform_sci" and uniformItem.uniqueID ~= "uniform_sci_green") then
 			return
 		end
 
@@ -32,7 +26,7 @@ if SERVER then
 
 		if curState == state then
 			ids[tostring(id)] = nil
-			player:SetBodygroup(id, player:GetGender() == GENDER_FEMALE and ITEM.resetBodyStateF or ITEM.resetBodyState)
+			player:SetBodygroup(id, 0)
 			player:SetCharacterData("BodyGroups", targetBodyGroups)
 		end
 	end
@@ -60,7 +54,7 @@ if SERVER then
 
 	function ITEM:OnUse(player, itemEntity)
 		local uniformItem = player:GetUniformItem()
-		if not uniformItem or uniformItem.uniqueID ~= "uniform_goo" or player:GetGender() == GENDER_FEMALE then
+		if not uniformItem or (uniformItem.uniqueID ~= "uniform_sci" and uniformItem.uniqueID ~= "uniform_sci_green") then
 			Clockwork.player:Notify(player, "Вы не можете надеть это.")
 			return false
 		end

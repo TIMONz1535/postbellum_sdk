@@ -3,7 +3,7 @@
 local ITEM = Clockwork.item:New();
 ITEM.name = "Пакетик чипсов";
 ITEM.plural = "Пакетиков чипсов";
-ITEM.model = "models/bioshockinfinite/bag_of_hhips.mdl";
+ITEM.model = "models/uu_branded/bioshockinfinite/bag_of_hhips.mdl";
 ITEM.spawnType = "consumable";
 ITEM.spawnValue = 3;
 ITEM.hunger = 15;

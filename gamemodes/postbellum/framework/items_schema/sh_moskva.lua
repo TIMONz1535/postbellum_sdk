@@ -5,7 +5,6 @@ ITEM.name = "Коктейль Москва"
 ITEM.plural = "Коктейлей Москва"
 ITEM.thirst = 10
 ITEM.model = "models/teebeutel/metro/objects/bottle02.mdl"
-ITEM.skin = 1
 ITEM.weight = 0.3
 ITEM.expireTime = 1800
 ITEM.vomit = 5

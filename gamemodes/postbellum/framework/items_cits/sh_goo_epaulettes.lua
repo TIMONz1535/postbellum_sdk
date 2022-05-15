@@ -5,10 +5,7 @@ ITEM.name = "Погоны Городского Ополчения"
 ITEM.plural = "Погон Городского Ополчения"
 ITEM.model = "models/pb_upd/cpp_items/epaulettes.mdl"
 ITEM.weight = 0.1
-ITEM.useText = "Надеть"
-ITEM.category = "Одежда"
 ITEM.description = "Погоны сотрудников Городского Ополчения."
-ITEM.customFunctions = {"Снять"}
 ITEM.wearBodyId = 3
 ITEM.wearBodyState = 1
 

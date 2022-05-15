@@ -3,7 +3,7 @@
 local ITEM = Clockwork.item:New();
 ITEM.name = "Буханка хлеба";
 ITEM.plural = "Буханок хлеба";
-ITEM.model = "models/bioshockinfinite/dread_loaf.mdl";
+ITEM.model = "models/uu_branded/bioshockinfinite/dread_loaf.mdl";
 ITEM.hunger = 25;
 ITEM.useSound = {"npc/barnacle/barnacle_crunch3.wav", "npc/barnacle/barnacle_crunch2.wav"};
 ITEM.weight = 0.6;

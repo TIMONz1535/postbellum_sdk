@@ -3,7 +3,7 @@
 local ITEM = Clockwork.item:New();
 ITEM.name = "Плитка шоколада";
 ITEM.plural = "Плиток шоколада";
-ITEM.model = "models/bioshockinfinite/hext_candy_chocolate.mdl";
+ITEM.model = "models/uu_branded/bioshockinfinite/hext_candy_chocolate.mdl";
 ITEM.hunger = 10;
 ITEM.useSound = {"npc/barnacle/barnacle_crunch3.wav", "npc/barnacle/barnacle_crunch2.wav"};
 ITEM.weight = 0.5;

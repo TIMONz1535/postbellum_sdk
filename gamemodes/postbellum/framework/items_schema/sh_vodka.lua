@@ -7,7 +7,6 @@ ITEM.spawnType = "consumable"
 ITEM.spawnValue = 3
 ITEM.thirst = 10
 ITEM.model = "models/teebeutel/metro/objects/bottle03.mdl"
-ITEM.skin = 1
 ITEM.weight = 0.3
 ITEM.expireTime = 1800
 ITEM.vomit = 15

@@ -5,7 +5,7 @@ ITEM.name = "Головка сыра"
 ITEM.desc =
 	"Изумительный благородный сыр. Великолепный внешний вид и мощный аромат, потрясающий уточенный вкус со слезой. Словно сон наяву."
 ITEM.weight = 3
-ITEM.model = "models/bioshockinfinite/pound_cheese.mdl"
+ITEM.model = "models/uu_branded/bioshockinfinite/pound_cheese.mdl"
 ITEM.category = "Продукты"
 ITEM.useText = "Вкусить"
 ITEM.useSound = {"npc/barnacle/barnacle_crunch3.wav", "npc/barnacle/barnacle_crunch2.wav"}

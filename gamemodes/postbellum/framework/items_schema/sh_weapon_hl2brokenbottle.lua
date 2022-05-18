@@ -37,17 +37,13 @@ ITEM.whitelist = {
 	[FACTION_INCOG] = true,
 };
 
--- Called when a player drops the item.
-function ITEM:OnCreateDropEntity(player, position)
-	local entity = Clockwork.entity:CreateItem(player, self, position)
-	
-	timer.Simple(300, function()
-		if (IsValid(entity)) then
-			entity:Remove()
+function ITEM:OnEntitySpawned(itemEntity, ply)
+	itemEntity:TimerSimple(
+		300,
+		function(ent)
+			ent:Remove()
 		end
-	end)
-	
-	return entity
+	)
 end
 
 ITEM:Register();

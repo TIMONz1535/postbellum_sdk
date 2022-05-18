@@ -24,20 +24,12 @@ function ITEM:OnUse(player, itemEntity)
 		entity:Spawn();
 
 		if (IsValid(itemEntity)) then
-			local physicsObject = itemEntity:GetPhysicsObject();
-
 			entity:SetPos( itemEntity:GetPos() );
 			entity:SetAngles( itemEntity:GetAngles() );
 
-			if (IsValid(physicsObject)) then
-				if (!physicsObject:IsMoveable()) then
-					physicsObject = entity:GetPhysicsObject();
-
-					if (IsValid(physicsObject)) then
-						physicsObject:EnableMotion(false);
-					end;
-				end;
-			end;
+			if not itemEntity:IsMoveable() then
+				entity:DisableMotion()
+			end
 		else
 			Clockwork.entity:MakeFlushToGround(entity, trace.HitPos, trace.HitNormal);
 		end;

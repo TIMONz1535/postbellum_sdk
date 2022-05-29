@@ -1,6 +1,6 @@
 local RECIPE = Clockwork.recipe:New()
 	RECIPE.name = "Монтировка"
-	RECIPE.category = "Холодное оружие"
+	RECIPE.category = "Оружие"
 	RECIPE.description = "Старая ржавая монтировка."
 	RECIPE.model = "models/weapons/w_crowbar.mdl"
 	RECIPE.required = {

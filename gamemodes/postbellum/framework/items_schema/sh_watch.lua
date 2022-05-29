@@ -5,7 +5,6 @@ ITEM.plural = "Карманных часов";
 --ITEM.spawnValue = 4;
 ITEM.model = "models/pb_upd/other/watch.mdl";
 ITEM.weight = 0.2;
-ITEM.category = "misc";
 ITEM.description = "Увесистые карманные часы, не дадут потерять вам ход времени.";
 
 -- Called when a player drops the item.

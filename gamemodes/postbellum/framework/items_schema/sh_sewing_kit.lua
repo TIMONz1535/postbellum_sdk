@@ -5,7 +5,6 @@ ITEM.plural = "Наборов для шитья";
 --ITEM.spawnValue = 4;
 ITEM.model = "models/pb_upd/other/sewkit.mdl";
 ITEM.weight = 0.5;
-ITEM.category = "misc";
 ITEM.description = "Набор для шитья, содержит в себе нитки ножницы и иголки для вышивания.";
 
 -- Called when a player drops the item.

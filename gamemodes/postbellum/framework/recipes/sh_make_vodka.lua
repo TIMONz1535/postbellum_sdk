@@ -1,5 +1,5 @@
 local RECIPE = Clockwork.recipe:New();
-	RECIPE.name = "Разбавить спирт"
+	RECIPE.name = "Забодяженная водка"
 	RECIPE.category = "Еда"
 	RECIPE.description = "Бутылек со спиртосодержащей жидкостью, что-то вроде самогона."
 	RECIPE.model = "models/teebeutel/metro/objects/bottle03.mdl"

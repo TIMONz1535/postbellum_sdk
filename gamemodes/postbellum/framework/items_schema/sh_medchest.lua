@@ -5,7 +5,6 @@ ITEM.plural = "Медицинских кейсов";
 --ITEM.spawnValue = 4;
 ITEM.model = "models/pb_upd/other/fmk.mdl";
 ITEM.weight = 2.5;
-ITEM.category = "misc";
 ITEM.description = "Жесткий чемоданчик, удобно хранящий в себе медикаменты.";
 
 -- Called when a player drops the item.

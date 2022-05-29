@@ -5,7 +5,6 @@ ITEM.plural = "Видеокассет";
 --ITEM.spawnValue = 4;
 ITEM.model = "models/props_office/videocassette.mdl";
 ITEM.weight = 0.2;
-ITEM.category = "misc";
 ITEM.description = "Видеокассета, реликвия былых времен.";
 
 -- Called when a player drops the item.

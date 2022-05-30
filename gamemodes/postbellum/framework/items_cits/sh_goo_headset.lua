@@ -20,7 +20,7 @@ if SERVER then
 		end
 
 		local id = self.wearBodyId
-		local state = player:GetGender() == GENDER_FEMALE and ITEM.wearBodyStateF or self.wearBodyState
+		local state = player:GetGender() == GENDER_FEMALE and self.wearBodyStateF or self.wearBodyState
 		if id >= player:GetNumBodyGroups() or state >= player:GetBodygroupCount(id) then
 			return
 		end
@@ -32,7 +32,7 @@ if SERVER then
 
 		if curState == state then
 			ids[tostring(id)] = nil
-			player:SetBodygroup(id, player:GetGender() == GENDER_FEMALE and ITEM.resetBodyStateF or ITEM.resetBodyState)
+			player:SetBodygroup(id, player:GetGender() == GENDER_FEMALE and self.resetBodyStateF or self.resetBodyState)
 			player:SetCharacterData("BodyGroups", targetBodyGroups)
 		end
 	end
@@ -71,7 +71,7 @@ if SERVER then
 		end
 
 		local id = self.wearBodyId
-		local state = player:GetGender() == GENDER_FEMALE and ITEM.wearBodyStateF or self.wearBodyState
+		local state = player:GetGender() == GENDER_FEMALE and self.wearBodyStateF or self.wearBodyState
 		if id >= player:GetNumBodyGroups() or state >= player:GetBodygroupCount(id) then
 			Clockwork.player:Notify(player, "Ваша модель не поддерживает этот предмет одежды.")
 			return false

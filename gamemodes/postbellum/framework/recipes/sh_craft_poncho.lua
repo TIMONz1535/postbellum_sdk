@@ -10,4 +10,9 @@ local RECIPE = Clockwork.recipe:New()
 	RECIPE.output = {
 		{"poncho", 1}
 	}
+	RECIPE.factions = {
+		FACTION_INCOG,
+		FACTION_VORT,
+		FACTION_VORTSLAVE,
+	}
 RECIPE:Register()

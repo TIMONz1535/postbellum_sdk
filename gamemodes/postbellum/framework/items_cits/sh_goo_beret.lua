@@ -32,7 +32,7 @@ if SERVER then
 
 		if curState == state then
 			ids[tostring(id)] = nil
-			player:SetBodygroup(id, player:GetGender() == GENDER_FEMALE and ITEM.resetBodyStateF or ITEM.resetBodyState)
+			player:SetBodygroup(id, player:GetGender() == GENDER_FEMALE and self.resetBodyStateF or self.resetBodyState)
 			player:SetCharacterData("BodyGroups", targetBodyGroups)
 		end
 	end

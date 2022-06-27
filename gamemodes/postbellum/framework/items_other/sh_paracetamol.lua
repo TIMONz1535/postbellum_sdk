@@ -3,7 +3,8 @@
 local ITEM = Clockwork.item:New()
 ITEM.name = "Парацетамол"
 ITEM.plural = "Парацетамола"
-ITEM.model = "models/props_junk/garbage_metalcan001a.mdl"
+ITEM.skin = 1
+ITEM.model = "models/pb_upd/medical/medjar.mdl"
 ITEM.weight = 0.2
 ITEM.category = "Медикаменты"
 ITEM.description = "Баночка с таблетками. Применяются при высокой температуре."

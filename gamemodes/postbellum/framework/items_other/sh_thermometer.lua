@@ -3,10 +3,10 @@
 local ITEM = Clockwork.item:New()
 ITEM.name = "Термометр"
 ITEM.plural = "Термометров"
-ITEM.model = "models/props_c17/TrapPropeller_Lever.mdl"
+ITEM.model = "models/pb_upd/medical/termometr.mdl"
 ITEM.weight = 0.2
 ITEM.category = "Медикаменты"
-ITEM.description = "Электронный термометр, показывает температуру тела."
+ITEM.description = "Спиртовой термометр, показывает температуру тела."
 
 -- Called when a player uses the item.
 function ITEM:OnUse(player, itemEntity)
@@ -15,13 +15,13 @@ function ITEM:OnUse(player, itemEntity)
 		if lookingPly:GetCharacterData("diseases") == "fever" then
 			Clockwork.player:Notify(player, "Температура: " .. math.random(38.1, 41.6) .. " C")
 		else
-			Clockwork.player:Notify(player, "Температура: 36.6 C")
+			Clockwork.player:Notify(player, "Температура: " .. math.random(35.2, 36.8) .. "C")
 		end
 	else
 		if player:GetCharacterData("diseases") == "fever" then
 			Clockwork.player:Notify(player, "Ваша температура: " .. math.random(38.1, 41.6) .. " C")
 		else
-			Clockwork.player:Notify(player, "Ваша температура: 36.6 C")
+			Clockwork.player:Notify(player, "Ваша температура: " .. math.random(35.2, 36.8) .. "C")
 		end
 	end
 	return false

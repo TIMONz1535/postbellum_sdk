@@ -3,7 +3,8 @@
 local ITEM = Clockwork.item:New()
 ITEM.name = "Антидот"
 ITEM.plural = "Антидотов"
-ITEM.model = "models/healthvial.mdl"
+ITEM.skin = 1
+ITEM.model = "models/pb_upd/medical/autoinjector.mdl"
 ITEM.weight = 0.2
 ITEM.useText = "Вколоть";
 ITEM.category = "Медикаменты"

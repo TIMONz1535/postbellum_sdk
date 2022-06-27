@@ -1,3 +1,4 @@
+
 --[[
 	© 2013 CloudSixteen.com do not share, re-distribute or modify
 	without permission of its author (kurozael@gmail.com).
@@ -9,10 +10,11 @@ ITEM.plural = "Антидепрессантов";
 ITEM.spawnType = "medical";
 ITEM.spawnValue = 3;
 --ITEM.cost = 10;
-ITEM.model = "models/props_junk/garbage_metalcan001a.mdl";
+ITEM.skin = 2
+ITEM.model = "models/pb_upd/medical/medjar.mdl"
 ITEM.weight = 0.2;
 ITEM.category = "Медикаменты";
-ITEM.description = "Металлическая баночка с таблетками, которые помогут вам расслабиться.";
+ITEM.description = "Пластиковая баночка с таблетками, которые помогут вам расслабиться.";
 ITEM.vomit = 30;
 
 -- Called when a player uses the item.

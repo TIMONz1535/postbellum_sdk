@@ -1,3 +1,4 @@
+
 --[[
 	© 2013 CloudSixteen.com do not share, re-distribute or modify
 	without permission of its author (kurozael@gmail.com).
@@ -9,11 +10,11 @@ ITEM.plural = "Адреналина";
 ITEM.isRareSpawn = true;
 ITEM.spawnValue = 1;
 --ITEM.cost = 100;
-ITEM.model = "models/props_junk/garbage_metalcan002a.mdl";
+ITEM.model = "models/pb_upd/medical/autoinjector.mdl";
 ITEM.weight = 0.2;
 ITEM.useText = "Вколоть";
 ITEM.category = "Медикаменты";
-ITEM.description = "Сильный препарат, произведенный для сил ГО.";
+ITEM.description = "Автоинъектор с адреналином. Сильный препарат, произведенный для сил ГО.";
 
 -- Called when a player uses the item.
 function ITEM:OnUse(player, itemEntity)

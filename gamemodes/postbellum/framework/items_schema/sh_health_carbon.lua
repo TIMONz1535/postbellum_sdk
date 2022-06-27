@@ -9,10 +9,10 @@ ITEM.plural = "Активированных углей";
 ITEM.spawnType = "medical";
 ITEM.spawnValue = 2;
 --ITEM.cost = 15;
-ITEM.model = "models/props_junk/garbage_metalcan001a.mdl";
+ITEM.model = "models/pb_upd/medical/medjar.mdl"
 ITEM.weight = 0.1;
 ITEM.category = "Медикаменты";
-ITEM.description = "Металлическая баночка с таблетками активированного угля. Помогает при отравлении.";
+ITEM.description = "Пластиковая баночка с таблетками активированного угля. Помогает при отравлении.";
 ITEM.vomit = -40;
 
 -- Called when a player uses the item.

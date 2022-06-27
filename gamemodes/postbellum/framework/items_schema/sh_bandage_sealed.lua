@@ -1,18 +1,14 @@
---[[
-	© 2013 CloudSixteen.com do not share, re-distribute or modify
-	without permission of its author (kurozael@gmail.com).
---]]
-
 local ITEM = Clockwork.item:New();
-ITEM.name = "Бинт";
-ITEM.plural = "Бинтов";
+ITEM.name = "Стерильный бинт";
+ITEM.plural = "Стерильных бинтов";
 ITEM.spawnType = "medical";
 ITEM.spawnValue = 1;
 --ITEM.cost = 8;
+ITEM.skin = 1;
 ITEM.model = "models/pb_upd/medical/bandage.mdl";
 ITEM.weight = 0.5;
 ITEM.category = "Медикаменты";
-ITEM.description = "Нестерильный бинт, используется для перевязки мелких ран. Пользуйтесь с умом.";
+ITEM.description = "Стерильный бинт в целофановой упаковке, используется для перевязки ран.";
 ITEM.customFunctions = {"Вылечить другого"};
 
 -- Called when a player uses the item.
@@ -20,25 +16,6 @@ function ITEM:OnUse(player, itemEntity)
 	player:SetHealth( math.Clamp( player:Health() + Schema:GetHealAmount(player), 0, player:GetMaxHealth() ) );
 
 	Clockwork.plugin:Call("PlayerHealed", player, player, self);
-
-	timer.Simple(
-		1,
-		function()
-			if IsValid(player) then
-				local disease = false
-				if player:Health() <= 30 and math.random(1, 20) == 1 then
-					player:SetCharacterData("diseases", "slow_deathinjection")
-					disease = true
-				end
-
-				if disease then
-					local pitch = player:GetCharacterData("Pitch") or 0
-					player:EmitSound("ambient/voices/citizen_beaten" .. math.random(1, 5) .. ".wav", 75, 100 + pitch)
-				end
-			end
-		end
-	)
-
 end;
 
 -- Called when a player drops the item.

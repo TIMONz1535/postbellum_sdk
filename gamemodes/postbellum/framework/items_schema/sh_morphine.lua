@@ -12,9 +12,13 @@ ITEM.description = "Автоинъектор с разовой дозой мор
 
 -- Called when a player uses the item.
 function ITEM:OnUse(player, itemEntity)
-	player:SetCharacterData("Stamina", 100);
-	player:BoostAttribute(self.name, ATB_ENDURANCE, -10, 240);
+	player:BoostAttribute(self.name, ATB_STAMINA, -15, 300);
+	player:BoostAttribute(self.name, ATB_ACROBATICS, -15, 300);
+	player:BoostAttribute(self.name, ATB_ENDURANCE, -20, 300);
 	player:BoostAttribute(self.name, ATB_STRENGTH, 80, 240);
+
+	player:SetHealth( math.Clamp( player:Health() + Schema:GetHealAmount(player, 0.5), 0, player:GetMaxHealth() ) );
+	Clockwork.plugin:Call("PlayerHealed", player, player, self);
 end;
 
 -- Called when a player drops the item.

@@ -26,7 +26,7 @@ function ITEM:OnUse(player, itemEntity)
 		function()
 			if IsValid(player) then
 				local disease = false
-				if player:Health() <= 30 and math.random(1, 20) == 1 then
+				if player:Health() <= 40 and math.random(1, 6) == 1 then
 					player:SetCharacterData("diseases", "slow_deathinjection")
 					disease = true
 				end

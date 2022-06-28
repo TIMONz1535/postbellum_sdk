@@ -24,7 +24,7 @@ function ITEM:OnDrop(player, position) end;
 if (SERVER) then
 	function ITEM:OnCustomFunction(player, name)
 		if (name == "Вылечить другого") then
-			Clockwork.player:RunClockworkCommand(player, "CharHeal", "bandage");
+			Clockwork.player:RunClockworkCommand(player, "CharHeal", "bandage_sealed");
 		end;
 	end;
 end;

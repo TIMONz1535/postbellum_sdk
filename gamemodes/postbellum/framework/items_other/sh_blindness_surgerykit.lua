@@ -1,12 +1,10 @@
--- luacheck: globals Clockwork IsValid SERVER
-
 local ITEM = Clockwork.item:New()
-ITEM.name = 'Аптечка "для глаз"'
-ITEM.plural = 'Аптечек "для глаз"'
-ITEM.model = "models/Items/boxmrounds.mdl"
+ITEM.name = 'Капли глазные'
+ITEM.plural = 'Каплей глазных"'
+ITEM.model = "models/pb_upd/medical/eyemed.mdl"
 ITEM.weight = 0.2
 ITEM.category = "Медикаменты"
-ITEM.description = "Аптечка со всем необходимым для профилактики зрения."
+ITEM.description = "Маленькая коробочка со всем необходимым для профилактики зрения."
 
 -- Called when a player uses the item.
 function ITEM:OnUse(player, itemEntity)
@@ -20,7 +18,7 @@ function ITEM:OnUse(player, itemEntity)
 		Clockwork.player:Notify(player, "Вы помогли пациенту избавиться от слепоты.")
 		lookingPly:SetCharacterData("diseases", "none")
 	else
-		Clockwork.player:Notify(player, "Вы использовали эту аптечку, но ничего не изменилось.")
+		Clockwork.player:Notify(player, "Вы использовали глазные капли, но ничего не изменилось.")
 	end
 end
 

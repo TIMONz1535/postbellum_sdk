@@ -13,9 +13,9 @@ function ITEM:OnUse(player, itemEntity)
 	local effect = math.random(1, 12)
 	if effect == 1 then
 		Clockwork.player:SetDrunk(player, 300)
-		player:BoostAttribute(self.name, ATB_ENDURANCE, -3, 300)
+		player:BoostAttribute(self.name, ATB_ENDURANCE, 5, 300)
 		player:BoostAttribute(self.name, ATB_ACROBATICS, -3, 300)
-		player:BoostAttribute(self.name, ATB_STRENGTH, 5, 300);
+		player:BoostAttribute(self.name, ATB_STRENGTH, -3, 300);
 		Clockwork.player:Notify(player, "Вы вкололи себе автоинжектор, что-то произошло.")
 	elseif effect == 2 then
 		player:SetCharacterData("diseases", "fever")
@@ -37,9 +37,9 @@ function ITEM:OnUse(player, itemEntity)
 		player:BoostAttribute(self.name, ATB_STRENGTH, -10, 240)
 		Clockwork.player:Notify(player, "Вы вкололи себе автоинжектор. Ноги стали ватными, вам тяжело двигаться.")
 	elseif effect == 6 then
-		player:BoostAttribute(self.name, ATB_STRENGTH, 60, 240);
-		player:BoostAttribute(self.name, ATB_STAMINA, 25, 240);
-		player:BoostAttribute(self.name, ATB_ENDURANCE, 25, 240);
+		player:BoostAttribute(self.name, ATB_STRENGTH, 10, 240);
+		player:BoostAttribute(self.name, ATB_STAMINA, 20, 240);
+		player:BoostAttribute(self.name, ATB_ENDURANCE, 60, 240);
 		Clockwork.player:Notify(player, "Вы вкололи себе автоинжектор, заряд бодрости пробежался по вашим жилам.")
 	elseif effect == 7 then
 		Clockwork.player:Notify(player, "Вы вкололи себе автоинжектор, что-то произошло.")

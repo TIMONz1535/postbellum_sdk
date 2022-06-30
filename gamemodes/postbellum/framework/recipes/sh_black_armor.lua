@@ -11,7 +11,8 @@ RECIPE.required = {
 	{"cits_beanie"},
 	{"cits_gasmask"},
 	{"craft_plate", 2},
-	{"craft_nails"}
+	{"scrap_cloth", 5},
+	{"sewing_kit"},
 }
 RECIPE.output = {
 	{"uniform_black"}

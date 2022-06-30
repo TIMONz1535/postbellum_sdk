@@ -5,7 +5,10 @@ local RECIPE = Clockwork.recipe:New()
 	RECIPE.model = "models/uu_branded/probs_misc/tobbcco_box-1.mdl"
 	RECIPE.required = {
 		{"uu_tea"},
-		{"water", 3}
+		{
+			{"breens_water", 3},
+			{"water", 3},
+		}
 	}
 	RECIPE.output = {
 		{"uu_tea_cup", 3}

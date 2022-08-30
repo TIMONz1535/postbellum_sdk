@@ -4,7 +4,6 @@ local RECIPE = Clockwork.recipe:New()
 	RECIPE.description = "Окрашенное в черный цвет пончо"
 	RECIPE.model = "models/hl2rp/vortigaunt_pb/suit/pb_vort_poncho1.mdl"
 	RECIPE.required = {
-		{"scrap_cloth", 0},
 		{"poncho", 1},
 		{"spray_can", 1}
 	}

@@ -27,4 +27,8 @@ RECIPE.factions = {
 	FACTION_RAIDER,
 	FACTION_SYNDICATE
 }
+RECIPE.reqAtts = {
+	{"dex", 25}, -- ловкость рук
+	{"str", 8} -- сила
+}
 RECIPE:Register()

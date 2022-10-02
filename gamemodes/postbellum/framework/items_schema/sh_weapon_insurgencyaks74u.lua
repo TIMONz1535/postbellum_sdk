@@ -4,8 +4,8 @@
 --]]
 
 local ITEM = Clockwork.item:New("weapon_base");
-ITEM.name = "АКС74У";
-ITEM.plural = "АКС74У";
+ITEM.name = "АКС-74У";
+ITEM.plural = "АКС-74У";
 --ITEM.cost = 200;
 ITEM.model = "models/weapons/insurgency/w_aks74u.mdl";
 ITEM.weight = 3;

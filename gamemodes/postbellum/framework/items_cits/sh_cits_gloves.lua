@@ -7,4 +7,6 @@ ITEM.description = "Беспалые перчатки."
 ITEM.wearBodyId = 3
 ITEM.wearBodyState = 1
 
+ITEM.scraps = 1
+
 ITEM:Register()

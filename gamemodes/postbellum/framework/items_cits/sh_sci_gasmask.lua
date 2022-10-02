@@ -6,6 +6,9 @@ ITEM.description = "Современный противогаз Ученых."
 ITEM.wearBodyId = 2
 ITEM.wearBodyState = 2
 
+ITEM.customFunctions = {"Снять"}
+ITEM.scraps = 0
+
 if SERVER then
 	local function ResetBodyGroup(self, player)
 		local uniformItem = player:GetUniformItem()

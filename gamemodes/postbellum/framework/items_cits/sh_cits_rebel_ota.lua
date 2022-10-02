@@ -7,4 +7,7 @@ ITEM.description = "Бронежилет ОТА поверх униформы п
 ITEM.wearBodyId = 1
 ITEM.wearBodyState = 13
 
+ITEM.customFunctions = {"Снять"}
+ITEM.scraps = 0
+
 ITEM:Register()

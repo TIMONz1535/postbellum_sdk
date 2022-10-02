@@ -9,6 +9,9 @@ ITEM.description = "Погоны сотрудников Городского О�
 ITEM.wearBodyId = 3
 ITEM.wearBodyState = 1
 
+ITEM.customFunctions = {"Снять"}
+ITEM.scraps = 0
+
 if SERVER then
 	local function ResetBodyGroup(self, player)
 		local uniformItem = player:GetUniformItem()

@@ -7,4 +7,7 @@ ITEM.description = "Бронежилет для сил сопротивлени�
 ITEM.wearBodyId = 1
 ITEM.wearBodyState = 15
 
+ITEM.customFunctions = {"Снять"}
+ITEM.scraps = 0
+
 ITEM:Register()

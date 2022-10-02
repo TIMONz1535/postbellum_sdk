@@ -7,4 +7,6 @@ ITEM.description = "Обыкновенная шапка."
 ITEM.wearBodyId = 4
 ITEM.wearBodyState = 3
 
+ITEM.scraps = 1
+
 ITEM:Register()

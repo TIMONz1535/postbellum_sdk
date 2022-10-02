@@ -7,4 +7,6 @@ ITEM.description = "Бандана на лицо."
 ITEM.wearBodyId = 4
 ITEM.wearBodyState = 1
 
+ITEM.scraps = 1
+
 ITEM:Register()

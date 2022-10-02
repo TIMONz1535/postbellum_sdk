@@ -4,7 +4,7 @@ ITEM.plural = "Спец. курток ГСР"
 ITEM.model = "models/tnb/items/shirt_citizen2.mdl"
 ITEM.skin = 2
 ITEM.weight = 1
-ITEM.description = "Куртка черного цвета для сотрудников ГСР."
+ITEM.description = "Куртка случайного цвета для сотрудников ГСР."
 ITEM.wearBodyId = 1
 ITEM.wearBodyState = 3
 

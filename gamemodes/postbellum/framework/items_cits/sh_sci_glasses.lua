@@ -6,6 +6,9 @@ ITEM.description = "Довольно простенькие очки, но по�
 ITEM.wearBodyId = 2
 ITEM.wearBodyState = 1
 
+ITEM.customFunctions = {"Снять"}
+ITEM.scraps = 0
+
 if SERVER then
 	local function ResetBodyGroup(self, player)
 		local uniformItem = player:GetUniformItem()

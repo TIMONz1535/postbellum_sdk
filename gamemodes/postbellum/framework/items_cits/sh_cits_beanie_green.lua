@@ -7,4 +7,6 @@ ITEM.description = "В комплекте может оказаться банд
 ITEM.wearBodyId = 4
 ITEM.wearBodyState = 4
 
+ITEM.scraps = 1
+
 ITEM:Register()

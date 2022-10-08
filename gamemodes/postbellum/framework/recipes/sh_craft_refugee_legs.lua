@@ -8,7 +8,7 @@ RECIPE.required = {
 	{"sewing_kit"},
 }
 RECIPE.output = {
-	{"cits_refugee_green"}
+	{"cits_refugee_legs"}
 }
 RECIPE.factions = {
 	FACTION_INCOG,

@@ -1,7 +1,7 @@
 local ITEM = Clockwork.item:New("uniform_base")
 ITEM.name = "Броня AirEx"
 ITEM.weight = 8
-ITEM.protection = 0.5
+ITEM.protection = 0.6
 ITEM.description = "Броня черного цвета. Сверху надето пальто AirEx с логотипом C18."
 ITEM.whitelist = {
 	[FACTION_MPF] = true,

@@ -1,6 +1,6 @@
 local ITEM = Clockwork.item:New()
-ITEM.name = 'Капли глазные'
-ITEM.plural = 'Каплей глазных"'
+ITEM.name = "Глазные капли"
+ITEM.plural = "Глазных капель"
 ITEM.model = "models/pb_upd/medical/eyemed.mdl"
 ITEM.weight = 0.2
 ITEM.category = "Медикаменты"

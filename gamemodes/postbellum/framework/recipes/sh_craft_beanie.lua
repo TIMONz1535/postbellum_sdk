@@ -10,5 +10,9 @@ RECIPE.required = {
 RECIPE.output = {
 	{"cits_beanie"}
 }
+RECIPE.reqAtts = {
+	{"dex", 4},
+	{"str", 2},
+}
 
 RECIPE:Register()

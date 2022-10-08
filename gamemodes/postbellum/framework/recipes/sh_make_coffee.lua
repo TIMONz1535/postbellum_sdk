@@ -5,10 +5,10 @@ local RECIPE = Clockwork.recipe:New()
 	RECIPE.model = "models/uu_branded/bioshockinfinite/xoffee_mug_closed.mdl"
 	RECIPE.required = {
 		{"uu_coffee"},
-		{
-			{"breens_water", 3},
+		-- {
+		-- 	{"breens_water", 3},
 			{"water", 3},
-		}
+		-- }
 	}
 	RECIPE.output = {
 		{"uu_coffee_cup", 3}

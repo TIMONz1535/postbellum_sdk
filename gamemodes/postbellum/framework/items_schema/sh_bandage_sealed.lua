@@ -8,7 +8,7 @@ ITEM.skin = 1;
 ITEM.model = "models/pb_upd/medical/bandage.mdl";
 ITEM.weight = 0.5;
 ITEM.category = "Медикаменты";
-ITEM.description = "Стерильный бинт в целофановой упаковке, используется для перевязки ран.";
+ITEM.description = "Стерильный бинт в целлофановой упаковке, используется для перевязки ран.";
 ITEM.customFunctions = {"Вылечить другого"};
 
 -- Called when a player uses the item.

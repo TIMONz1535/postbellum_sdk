@@ -3,6 +3,7 @@
 local ITEM = Clockwork.item:New("alcohol_base")
 ITEM.name = "Бутылек спирта";
 ITEM.plural = "Бутыльков спирта";
+ITEM.category = "Медикаменты"
 ITEM.thirst = 10
 ITEM.model = "models/labware/bottle1.mdl";
 ITEM.weight = 0.3

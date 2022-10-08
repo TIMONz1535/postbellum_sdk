@@ -8,7 +8,7 @@ local RECIPE = Clockwork.recipe:New()
 	RECIPE.output = {
 		{"empty_medchest"},
 		{"health_vial", 2},
-		{"bandage", 3},
+		{"bandage_sealed", 3},
 		{"health_carbon", 1}
 	}
 RECIPE:Register()

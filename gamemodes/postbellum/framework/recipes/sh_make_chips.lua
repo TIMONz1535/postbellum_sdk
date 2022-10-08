@@ -1,7 +1,7 @@
 local RECIPE = Clockwork.recipe:New()
 RECIPE.name = "Приготовить чипсы"
 RECIPE.category = "Еда"
-RECIPE.description = "Обжаренные в масле картофельные чипсы, отличная закуска."
+RECIPE.description = "Обжаренные в масле, тонко нарезанные картофельные дольки. Отличная закуска."
 RECIPE.model = "models/uu_branded/bioshockinfinite/bag_of_hhips.mdl"
 RECIPE.requiredProp = {
 	"Кухонная плита",

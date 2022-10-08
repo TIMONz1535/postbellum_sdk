@@ -8,7 +8,7 @@ ITEM.useSound = {"npc/barnacle/barnacle_crunch3.wav", "npc/barnacle/barnacle_cru
 ITEM.weight = 0.5;
 ITEM.useText = "Съесть";
 ITEM.category = "Продукты";
-ITEM.description = "Большой и очень кислый лимон.";
+ITEM.description = "Большой и очень кислый лимон. Восхитительный на вкус.";
 ITEM.vomit = 5;
 
 -- Called when a player uses the item.

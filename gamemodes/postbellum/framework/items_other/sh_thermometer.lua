@@ -6,7 +6,7 @@ ITEM.plural = "Термометров"
 ITEM.model = "models/pb_upd/medical/termometr.mdl"
 ITEM.weight = 0.2
 ITEM.category = "Медикаменты"
-ITEM.description = "Спиртовой термометр, показывает температуру тела."
+ITEM.description = "Ртутный термометр, показывает температуру тела."
 
 -- Called when a player uses the item.
 function ITEM:OnUse(player, itemEntity)

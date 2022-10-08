@@ -25,20 +25,15 @@ function ITEM:OnUse(player, itemEntity)
 		1,
 		function()
 			if IsValid(player) then
-				local disease = false
 				if player:Health() <= 40 and math.random(1, 6) == 1 then
 					player:SetCharacterData("diseases", "slow_deathinjection")
-					disease = true
-				end
 
-				if disease then
 					local pitch = player:GetCharacterData("Pitch") or 0
 					player:EmitSound("ambient/voices/citizen_beaten" .. math.random(1, 5) .. ".wav", 75, 100 + pitch)
 				end
 			end
 		end
 	)
-
 end;
 
 -- Called when a player drops the item.

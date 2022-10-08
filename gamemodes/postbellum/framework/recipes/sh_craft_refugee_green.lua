@@ -1,5 +1,5 @@
 local RECIPE = Clockwork.recipe:New()
-RECIPE.name = "Сшить куртку."
+RECIPE.name = "Сшить куртку"
 RECIPE.category = "Одежда"
 RECIPE.description = "Самодельные зеленая куртка."
 RECIPE.model = "models/tnb/items/shirt_citizen2.mdl"
@@ -20,6 +20,10 @@ RECIPE.factions = {
 	FACTION_REBELJUG,
 	FACTION_RAIDER,
 	FACTION_SYNDICATE
+}
+RECIPE.reqAtts = {
+	{"dex", 16},
+	{"str", 8},
 }
 
 RECIPE:Register()

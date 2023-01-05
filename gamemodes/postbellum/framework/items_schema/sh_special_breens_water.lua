@@ -21,10 +21,13 @@ ITEM.vomit = 15;
 function ITEM:OnUse(player, itemEntity)
 	player:SetCharacterData("Stamina", 100);
 	player:SetHealth(math.Clamp(player:Health() + 4, 0, player:GetMaxHealth()));
-	
+
 	player:BoostAttribute(self.name, ATB_ACROBATICS, -3, 120);
 	player:BoostAttribute(self.name, ATB_ENDURANCE, -3, 120);
 	player:BoostAttribute(self.name, ATB_STRENGTH, -3, 120);
+
+	-- hack for EyeMovement
+	player:SetNetVar("_LastDamageTime", CurTime())
 end;
 
 -- Called when a player drops the item.

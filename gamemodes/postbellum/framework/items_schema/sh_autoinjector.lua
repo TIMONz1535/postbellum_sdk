@@ -80,6 +80,8 @@ function ITEM:OnUse(player, itemEntity)
 		Clockwork.player:Notify(player, "Вы вкололи себе автоинъектор, но ничего не изменилось.")
 	end
 
+	-- hack for EyeMovement
+	player:SetNetVar("_LastDamageTime", CurTime())
 end;
 
 -- Called when a player drops the item.

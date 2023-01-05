@@ -23,6 +23,9 @@ function ITEM:OnUse(player, itemEntity)
 
 	player:BoostAttribute(self.name, ATB_ENDURANCE, 10, 120);
 	player:BoostAttribute(self.name, ATB_STRENGTH, -2, 120);
+
+	-- hack for EyeMovement
+	player:SetNetVar("_LastDamageTime", CurTime())
 end;
 
 -- Called when a player drops the item.

@@ -18,6 +18,9 @@ ITEM.description = "Баночка с белым порошком. Необхо�
 function ITEM:OnUse(player, itemEntity)
 	player:SetCharacterData("Stamina", 100);
 	player:BoostAttribute(self.name, ATB_STRENGTH, 5, 120);
+
+	-- hack for EyeMovement
+	player:SetNetVar("_LastDamageTime", CurTime())
 end;
 
 -- Called when a player drops the item.

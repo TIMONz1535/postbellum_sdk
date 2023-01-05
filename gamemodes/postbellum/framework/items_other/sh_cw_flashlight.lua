@@ -12,4 +12,5 @@ ITEM.weight = 0.8;
 ITEM.description = "Обычный фонарик с кнопкой.";
 ITEM.isFakeWeapon = true;
 ITEM.isMeleeWeapon = true;
+ITEM.category = "Другое";
 ITEM:Register();
